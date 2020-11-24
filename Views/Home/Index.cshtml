@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <div class="jumbotron">
+       @{Html.BeginForm("ExportToPDF", "Home", FormMethod.Post);
+            {
+                <div>
+                    <input type="submit" class="btn btn-success" value="Convert PDF" style="width:150px;height:50px" />
+                </div>
+            }
+            Html.EndForm(); 
+        }
+        <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="ExportToPDF">Convert Html to Pdf</a>
+    </div>
+</div>
